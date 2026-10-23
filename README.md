@@ -26,9 +26,23 @@ Getting a portable command-line environment set up manually can be a hassle. Thi
 - 🧰 **Local npm environment** — keeps global packages and npm cache in project-local folders.
 - 🚀 **One-click setup** — prepares the environment and installs OpenClaude.
 - ▶️ **Simple launcher** — start OpenClaude using a separate batch file.
-- 💾 **Moveable folder** — designed to be copied to another compatible Windows PC or USB drive.
+- 💾 **Movable folder** — designed to be copied to another compatible Windows PC or USB drive.
 
 > **Please note:** Initial setup needs an internet connection. Portability can depend on OpenClaude, its dependencies, authentication, network access, and the target PC's policies.
+
+---
+
+## 🖥️ Screenshot
+
+<p align="center">
+  <img src="screenshots/claude-cli.png" alt="OpenClaude CLI running in Windows Terminal" width="850">
+</p>
+
+<p align="center">
+  <em>OpenClaude running in a Windows terminal.</em>
+</p>
+
+---
 
 ## 🚀 Quick Start
 
@@ -87,6 +101,14 @@ Portable-OpenClaude/
 └── LICENSE                 # MIT license
 ```
 
+The screenshot is stored separately:
+
+```text
+Portable-OpenClaude/
+└── screenshots/
+    └── claude-cli.png      # CLI screenshot shown above
+```
+
 After setup, these folders are created or populated locally:
 
 ```text
@@ -97,6 +119,8 @@ Portable-OpenClaude/
 ```
 
 These generated folders are intentionally excluded from the Git repository. Keep them when copying an already configured environment to another PC.
+
+---
 
 ## 🖥️ Requirements
 
@@ -110,6 +134,8 @@ These generated folders are intentionally excluded from the Git repository. Keep
 
 Some school, workplace, or managed computers may block downloads, scripts, or command-line applications.
 
+---
+
 ## 💾 Using It on Another PC or USB Drive
 
 1. Run setup and make sure it completes successfully.
@@ -118,6 +144,8 @@ Some school, workplace, or managed computers may block downloads, scripts, or co
 4. On the other compatible Windows PC, run `Launch-OpenClaude.bat`.
 
 The folder is designed to be portable, but it is **not guaranteed to work on every PC**. You may need to authenticate again, and OpenClaude or its dependencies may have additional system requirements. The first setup requires internet access.
+
+---
 
 ## 🛠️ Troubleshooting
 
@@ -149,9 +177,21 @@ Do not use the rejected archive. Retry the download and confirm that the checksu
 <details>
 <summary><strong>The launcher says OpenClaude is missing</strong></summary>
 
-Run `Setup-OpenClaude.bat` again and confirm that the npm installation completes and creates `npm-global\\openclaude.cmd`.
+Run `Setup-OpenClaude.bat` again and confirm that the npm installation completes and creates `npm-global\openclaude.cmd`.
 
 </details>
+
+<details>
+<summary><strong>The screenshot does not appear on GitHub</strong></summary>
+
+- Confirm that the image is committed to the repository.
+- Check that the file is named `claude-cli.png`.
+- Make sure its location is exactly `screenshots/claude-cli.png`.
+- Check that the filename and folder capitalization match the README image path.
+
+</details>
+
+---
 
 ## 🔒 Security
 
@@ -159,6 +199,8 @@ Run `Setup-OpenClaude.bat` again and confirm that the npm installation completes
 - Download Node.js only from the official site: [nodejs.org](https://nodejs.org/).
 - Do not commit API keys, access tokens, passwords, or personal configuration files.
 - A checksum confirms that the downloaded archive matches the expected hash; it does not replace careful review of the scripts and their sources.
+
+---
 
 ## 📜 License
 

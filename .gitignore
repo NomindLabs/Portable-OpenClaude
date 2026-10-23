@@ -1,0 +1,29 @@
+# Portable Node.js runtime
+/node/
+
+# npm global packages and cache
+/npm-global/
+/npm-cache/
+
+# Temporary setup files
+/_node_extract/
+/PortableOpenClaudeExtract/
+/node-v*-win-x64.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/

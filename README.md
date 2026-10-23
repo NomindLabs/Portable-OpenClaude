@@ -1,49 +1,49 @@
-# Portable OpenClaude
+# ⚡ Portable OpenClaude
 
-A portable OpenClaude environment for Windows, powered by Node.js.
+### Your OpenClaude environment. Portable. Simple. Ready to go.
 
-Set up Node.js and OpenClaude locally inside the project folder without requiring a traditional system-wide Node.js installation.
+A Windows-friendly setup that keeps Node.js and npm's global environment inside one project folder—without requiring a traditional system-wide Node.js installation.
 
-## ✨ Features
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows 10 and 11">
+  <img src="https://img.shields.io/badge/Runtime-Portable%20Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Portable Node.js">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"></a>
+</p>
 
-- **Portable Node.js:** Keeps Node.js inside the project directory.
-- **Automatic Setup:** Downloads Node.js, verifies its SHA-256 checksum, extracts it, and installs OpenClaude.
-- **Local npm Directories:** Stores global npm packages and cache inside the project.
-- **Simple Launching:** Start OpenClaude using a separate batch file.
-- **Easy to Move:** Designed to be transferable between compatible Windows PCs.
+<p align="center">
+  <a href="https://github.com/nominda/Portable-OpenClaude">View Repository</a> ·
+  <a href="https://github.com/nominda/Portable-OpenClaude/issues">Report an Issue</a>
+</p>
 
-## 📁 Project Structure
+---
 
-```text
-Portable-OpenClaude/
-├── node/                     # Downloaded portable Node.js runtime
-├── npm-global/               # Globally installed npm packages
-├── npm-cache/                # npm cache
-├── Setup-OpenClaude.bat      # Initial setup and installation
-├── Launch-OpenClaude.bat     # Launch OpenClaude
-├── README.md
-├── .gitignore
-└── LICENSE
+## ✨ Why Portable OpenClaude?
+
+Getting a portable command-line environment set up manually can be a hassle. This project automates the initial setup with two Windows batch files.
+
+- 📦 **Portable runtime** — downloads Node.js into the project folder.
+- 🔐 **SHA-256 verification** — checks the downloaded archive before extracting it.
+- 🧰 **Local npm environment** — keeps global packages and npm cache in project-local folders.
+- 🚀 **One-click setup** — prepares the environment and installs OpenClaude.
+- ▶️ **Simple launcher** — start OpenClaude using a separate batch file.
+- 💾 **Moveable folder** — designed to be copied to another compatible Windows PC or USB drive.
+
+> **Please note:** Initial setup needs an internet connection. Portability can depend on OpenClaude, its dependencies, authentication, network access, and the target PC's policies.
+
+## 🚀 Quick Start
+
+### 1. Get the project
+
+Download the repository using **Code → Download ZIP**, then extract it to a folder you can write to.
+
+Or clone it with Git:
+
+```bash
+git clone https://github.com/nominda/Portable-OpenClaude.git
+cd Portable-OpenClaude
 ```
 
-The `node/`, `npm-global/`, and `npm-cache/` directories are generated or populated during setup. They do not need to be committed to GitHub.
-
-## 🖥️ Requirements
-
-- Windows 10 or Windows 11, 64-bit recommended.
-- An internet connection for the initial setup and package installation.
-- Windows PowerShell.
-- Sufficient disk space and permission to write to the project directory.
-
-Some managed computers may block downloads or script execution.
-
-## 🚀 Getting Started
-
-### 1. Download the repository
-
-Download or clone this repository to a folder on your computer.
-
-### 2. Run the setup
+### 2. Set it up
 
 Double-click:
 
@@ -53,56 +53,121 @@ Setup-OpenClaude.bat
 
 The setup script is designed to:
 
-1. Download the configured official Node.js Windows archive.
+1. Download the configured official Node.js for Windows x64.
 2. Verify the archive's SHA-256 checksum.
 3. Extract Node.js into the project directory.
 4. Create local npm global and cache directories.
 5. Install `@twigpine/openclaude@latest`.
-6. Check whether the OpenClaude launcher exists.
+6. Check that the OpenClaude launcher was created.
+
+Wait until setup reports that it completed successfully.
 
 ### 3. Launch OpenClaude
 
-After successful setup, run:
+Double-click:
 
 ```text
 Launch-OpenClaude.bat
 ```
 
-## 💾 Portable Usage
-
-The project is designed to keep Node.js and npm's global package environment within its own directory.
-
-To move the environment to another compatible Windows PC, copy the complete project folder, including the generated runtime and package directories.
-
-Portability is not guaranteed on every computer. OpenClaude may have additional runtime, network, authentication, or system requirements.
-
-## 🔒 Security Notes
-
-- The setup script should verify the downloaded archive against the official SHA-256 checksum for the selected Node.js release.
-- Review batch scripts before running them.
-- Only download Node.js from the official website: https://nodejs.org/
-- Do not commit API keys, authentication tokens, credentials, or personal configuration files.
-
-## 🛠️ Troubleshooting
-
-**Setup fails while downloading Node.js**
-- Check your internet connection.
-- Check whether your firewall or network blocks the download.
-
-**Checksum verification fails**
-- Do not use the rejected archive. Retry the download and verify the checksum against the official Node.js release information.
-
-**OpenClaude installation fails**
-- Review the npm error displayed in the setup window.
-- Check your network connection and whether the installed Node.js version meets the package requirements.
-
-**OpenClaude launcher is missing**
-- Run `Setup-OpenClaude.bat` again and check whether npm installation completed successfully.
-
-## 📜 License
-
-See the [LICENSE](LICENSE) file.
+Follow any prompts shown by OpenClaude, including any required authentication or configuration.
 
 ---
 
-**Note:** This repository provides setup scripts and a portable runtime workflow. It does not guarantee that every dependency or external service used by OpenClaude is fully portable.
+## 📁 Project Layout
+
+The repository starts with these files:
+
+```text
+Portable-OpenClaude/
+├── Setup-OpenClaude.bat    # Downloads and installs the environment
+├── Launch-OpenClaude.bat   # Starts OpenClaude
+├── README.md               # Project documentation
+├── .gitignore              # Excludes generated files
+└── LICENSE                 # MIT license
+```
+
+After setup, these folders are created or populated locally:
+
+```text
+Portable-OpenClaude/
+├── node/                   # Portable Node.js runtime
+├── npm-global/             # Global npm packages
+└── npm-cache/              # npm cache
+```
+
+These generated folders are intentionally excluded from the Git repository. Keep them when copying an already configured environment to another PC.
+
+## 🖥️ Requirements
+
+| Requirement | Details |
+|---|---|
+| Operating system | Windows 10 or Windows 11, 64-bit |
+| Initial setup | Internet connection |
+| Built-in tools | Windows PowerShell |
+| Storage | Enough free space for Node.js and npm packages |
+| Permissions | Write access to the project folder |
+
+Some school, workplace, or managed computers may block downloads, scripts, or command-line applications.
+
+## 💾 Using It on Another PC or USB Drive
+
+1. Run setup and make sure it completes successfully.
+2. Close OpenClaude.
+3. Copy the **entire project folder**, including `node/`, `npm-global/`, and `npm-cache/`, to the destination.
+4. On the other compatible Windows PC, run `Launch-OpenClaude.bat`.
+
+The folder is designed to be portable, but it is **not guaranteed to work on every PC**. You may need to authenticate again, and OpenClaude or its dependencies may have additional system requirements. The first setup requires internet access.
+
+## 🛠️ Troubleshooting
+
+<details>
+<summary><strong>Node.js download or extraction fails</strong></summary>
+
+- Check your internet connection.
+- Check whether a firewall or managed network blocks `nodejs.org`.
+- Run setup again after checking the error shown in the window.
+
+</details>
+
+<details>
+<summary><strong>SHA-256 verification fails</strong></summary>
+
+Do not use the rejected archive. Retry the download and confirm that the checksum configured in the setup script matches the official Node.js release archive.
+
+</details>
+
+<details>
+<summary><strong>OpenClaude installation fails</strong></summary>
+
+- Read the npm error printed in the setup window.
+- Check internet access and any package requirements.
+- Retry setup after resolving the reported issue.
+
+</details>
+
+<details>
+<summary><strong>The launcher says OpenClaude is missing</strong></summary>
+
+Run `Setup-OpenClaude.bat` again and confirm that the npm installation completes and creates `npm-global\\openclaude.cmd`.
+
+</details>
+
+## 🔒 Security
+
+- Review the batch files before running them.
+- Download Node.js only from the official site: [nodejs.org](https://nodejs.org/).
+- Do not commit API keys, access tokens, passwords, or personal configuration files.
+- A checksum confirms that the downloaded archive matches the expected hash; it does not replace careful review of the scripts and their sources.
+
+## 📜 License
+
+This project is distributed under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  Made with ⚡ by <a href="https://github.com/nominda"><strong>Nominda Yasasvin</strong></a>
+  <br>
+  <sub>If this project helps you, consider giving the repository a ⭐ on GitHub.</sub>
+</p>

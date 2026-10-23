@@ -11,8 +11,8 @@ A Windows-friendly setup that keeps Node.js and npm's global environment inside 
 </p>
 
 <p align="center">
-  <a href="https://github.com/nominda/Portable-OpenClaude">View Repository</a> ·
-  <a href="https://github.com/nominda/Portable-OpenClaude/issues">Report an Issue</a>
+  <a href="https://github.com/NomindLabs/Portable-OpenClaude">View Repository</a> ·
+  <a href="https://github.com/NomindLabs/Portable-OpenClaude/issues">Report an Issue</a>
 </p>
 
 ---
@@ -53,7 +53,7 @@ Download the repository using **Code → Download ZIP**, then extract it to a fo
 Or clone it with Git:
 
 ```bash
-git clone https://github.com/nominda/Portable-OpenClaude.git
+git clone https://github.com/NomindLabs/Portable-OpenClaude.git
 cd Portable-OpenClaude
 ```
 
